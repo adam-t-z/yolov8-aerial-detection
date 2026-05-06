@@ -1,0 +1,6 @@
+names:
+- car
+nc: 1
+test: /home/a/projects/wo/sager/data/images/test
+train: /home/a/projects/wo/sager/data/images/train
+val: /home/a/projects/wo/sager/data/images/val

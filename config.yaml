@@ -1,0 +1,50 @@
+# Preprocessing Configuration
+preprocess:
+  seed: 42
+  split: [0.7, 0.2, 0.1]  # train, val, test ratios
+
+# Training Configuration
+training:
+  # Model settings
+  model_name: "yolov8n"  # Base model to fine-tune
+  
+  # Training hyperparameters
+  epochs: 100
+  batch_size: 8
+  learning_rate: 0.001
+  momentum: 0.937
+  weight_decay: 0.0005
+  patience: 20  # Early stopping patience
+  
+  # Data and output
+  data_yaml: "data/data.yaml"
+  output_dir: "runs/detect/car_detector"
+  save_period: 10  # Save checkpoint every N epochs
+  
+  # Device and optimization
+  device: "cpu"  # or "cuda" or "0" for GPU ID
+  half: false  # Use FP16 precision
+  workers: 2  # DataLoader workers
+  
+  # Augmentation
+  augment: true
+  mosaic: 1.0
+  flipud: 0.5
+  fliplr: 0.5
+  degrees: 10
+  translate: 0.1
+  scale: 0.5
+
+# Validation Configuration
+validation:
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+  device: "cpu"
+  save_results: true
+  results_dir: "validation_results"
+
+# Model deployment
+deployment:
+  model_path: "best.pt"
+  confidence_threshold: 0.5
+  device: "cpu"
