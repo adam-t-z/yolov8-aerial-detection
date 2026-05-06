@@ -11,7 +11,7 @@ A modular, production-ready pipeline for training YOLOv8n object detection model
 
 You can try the deployed model online using the following link:
 
-[Deployed Model on Streamlit](https://sager-model.streamlit.app/)
+[Deployed Model on Streamlit](https://yolov8-ariel-detection.streamlit.app/)
 
 ---
 
